@@ -1,8 +1,24 @@
 package Oops_Concept;
 // it is good practice to use the getter and setter instead of using public modifier
 public class Student {
+
     private String name = "Harender";   //private access specifier/modifier
     int rollNumber = 9001;
+    public Student() {
+        name = "Harender";
+        rollNumber  = 9001;
+    }
+    public Student(String n, int num) {
+        name = n;
+        rollNumber = num;
+    }
+    public Student(String n) {
+        name = n;
+    }
+
+    public void print() {
+        System.out.println("Name = " + name + " " + "Roll Number = " + rollNumber);
+    }
 
     public String getName() {    // getter() to get private value
         return name;
