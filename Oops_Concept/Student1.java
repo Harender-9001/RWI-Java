@@ -4,7 +4,7 @@ public class Student1 {
     final int rollNumber;
     String name;
     double cgpa;
-     static final double conversionFactor = 0.9;
+    public final static double CONVERSIONFACTOR = 0.9;  // a final static variable same as constant in other language and it is better to write variable name in capital letter
     static int studentCount;  // static keyword make the variable or methods and class member not an object member that mean all tha object of class can share the same value of static variable
 
     Student1(String name, int rollNumber){
