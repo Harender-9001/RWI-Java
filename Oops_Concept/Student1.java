@@ -3,6 +3,8 @@ package Oops_Concept;
 public class Student1 {
     final int rollNumber;
     String name;
+    double cgpa;
+    final double conversionFactor = 0.9;
     static int studentCount;  // static keyword make the variable or methods and class member not an object member that mean all tha object of class can share the same value of static variable
 
     Student1(String name, int rollNumber){
