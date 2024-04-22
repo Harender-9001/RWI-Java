@@ -13,11 +13,20 @@ public class StringIntro {
         // find length of given string
         System.out.println(str2.length());
 
-        // concatenation of two strings
-//        System.out.println(str3 + "Honey");
-//        System.out.println(str3 + str2);
-//        str1 = str1.concat(str2);
-//        System.out.println(str1);
+        //concatenation of two strings
+        System.out.println(str3 + "Honey");
+
+        System.out.println(str3 + str2);
+
+        str1 = str1.concat(str2);
+        System.out.println(str1);
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("Hello");
+        sb.append(" ");
+        sb.append("Harender");
+        System.out.println(sb.toString());
+
 
         // return true or false based on equality
         System.out.println(str1.equals(str3));

@@ -32,13 +32,22 @@ public class StringMethods {
 
         // equals() method compares two given strings if any character not match return false otherwise true
         String str1="Harry";
+        StringBuilder sb1 = new StringBuilder();
+        System.out.println(sb1.capacity());
+        sb1.append("java is my favourite language");
+        System.out.println(sb1.capacity());
+        StringBuilder sb2 = new StringBuilder("Hello");
+        System.out.println(sb2.capacity());
         String str2="Harry";
         String str3="HARRY";
         String str4="Barry";
+        System.out.println(sb1.equals(sb2));   //false because equals() in StringBuilder checks reference
         System.out.println(str1.equals(str2)); //true because content and case is same
         System.out.println(str1.equals(str3)); //false because case is not same
         System.out.println(str1.equalsIgnoreCase(str3)); //true because case are ignored
         System.out.println(str1.equals(str4)); //false because content is not same
+//        sb1.append("java is my favourite language");
+        System.out.println(sb1.capacity());
 
         // indexOf() method returns the position of first occurrence of specified character or string
         String str6 = "this is index of example";

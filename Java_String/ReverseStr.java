@@ -1,6 +1,6 @@
 package Java_String;
 
-import com.github.weisj.jsvg.S;
+//import com.github.weisj.jsvg.S;
 
 import java.util.Scanner;
 
