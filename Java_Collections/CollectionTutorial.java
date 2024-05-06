@@ -1,10 +1,18 @@
 package Java_Collections;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Comparator;
-import java.util.Vector;
-import java.util.Stack;
+import java.util.*;
+class Demo{
+    int id;
+    String name;
+    double salary;
+    public Demo(int id, String name, double salary) {
+        super();
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+    }
+
+}
 
 public class CollectionTutorial {
     public static void main(String[] args) {
@@ -27,7 +35,7 @@ public class CollectionTutorial {
         ll.add(12);
         ll.add(32);
         ll.add(8);
-        ll.add(3,5);
+        ll.add(3, 5);
         System.out.println("Size of LinkedList :" + ll.size());
         System.out.println("LinkedList :" + ll);
         System.out.println("Value at index :" + ll.get(4));
@@ -45,7 +53,7 @@ public class CollectionTutorial {
         System.out.println("ArrayList is :" + arrl);
         arrl.sort(Comparator.reverseOrder());
         System.out.println("Reverse ArrayList is :" + arrl);
-        ArrayList<Integer> sl = new ArrayList<>(arrl.subList(1,4));
+        ArrayList<Integer> sl = new ArrayList<>(arrl.subList(1, 4));
         System.out.println(sl);
         System.out.println();
 
@@ -65,11 +73,15 @@ public class CollectionTutorial {
 
         //Stack
         Stack<Integer> st = new Stack<>();
-        for (int i=1;i<=5;i++){
-            st.add(i*2);
+        for (int i = 1; i <= 5; i++) {
+            st.add(i * 2);
         }
-        st.add(0,2);
-        System.out.println("Stack is :" + st);
+        st.add(0, 2);
+        Iterator<Integer> itr = st.iterator();
+        while (itr.hasNext()) {
+            System.out.println("Stack elements are :" + itr.next());
+        }
+//        System.out.println("Stack is :" + st);
         System.out.println("peak element is :" + st.peek());
         st.push(12);
         System.out.println("New stack is :" + st);
@@ -80,13 +92,52 @@ public class CollectionTutorial {
 
         //Queue InterFace
         //PriorityQueue
+        PriorityQueue<String> queue = new PriorityQueue<String>();
+        queue.add("Harender");
+        queue.add("Aakash");
+        queue.add("Nishant");
+        queue.add("Ravi");
+        System.out.println("head:" + queue.element());
+        System.out.println("head:" + queue.peek());
+        System.out.println("iterating the queue elements :");
+        Iterator<String> itr1 = queue.iterator();
+        while (itr1.hasNext()) {
+            System.out.println(itr1.next());
+        }
+        queue.remove();
+        queue.poll();
+        System.out.println("after removing two elements:");
+        Iterator<String> itr2 = queue.iterator();
+        while (itr2.hasNext()) {
+            System.out.println(itr2.next());
+        }
+        System.out.println();
 
         //DeQueue InterFace
         //ArrayDequeue
+        Deque<String> deque = new ArrayDeque<String>();
+        deque.add("Harender");
+        deque.add("Karan");
+        deque.add("Aakash");
+        System.out.println("peak :" + deque.peek());
+        //Traversing elements
+        for (String str : deque) {
+            System.out.println(str);
+        }
         //LinkedList
 
         //Set InterFace
         //HashSet
+        HashSet<Demo> hs = new HashSet<Demo>();
+        Demo d1 = new Demo(121,"Harender", 85000.0);
+        Demo d2 = new Demo(130,"Aakash", 75000.0);
+        Demo d3 = new Demo(127,"Kirti", 80000.0);
+        hs.add(d1);
+        hs.add(d2);
+        hs.add(d3);
+        for(Demo d:hs) {
+            System.out.println("Employee id :" + d.id + "\n" + "Employee Name :" + d.name + "\n" + "Employee Salary :" + d.salary);
+        }
         //LinkedHashSet
         //SortedSet InterFace
         //TreeSet
