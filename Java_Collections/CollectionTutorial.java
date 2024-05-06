@@ -92,55 +92,83 @@ public class CollectionTutorial {
 
         //Queue InterFace
         //PriorityQueue
-        PriorityQueue<String> queue = new PriorityQueue<String>();
-        queue.add("Harender");
+        PriorityQueue<String> queue = new PriorityQueue<>(Comparator.reverseOrder());
+        queue.offer("Harender");
         queue.add("Aakash");
         queue.add("Nishant");
-        queue.add("Ravi");
-        System.out.println("head:" + queue.element());
-        System.out.println("head:" + queue.peek());
+        queue.offer("Ravi");
+        System.out.println("PriorityQueue head:" + queue.element());
+        System.out.println("PriorityQueue peak:" + queue.peek());
         System.out.println("iterating the queue elements :");
-        Iterator<String> itr1 = queue.iterator();
-        while (itr1.hasNext()) {
-            System.out.println(itr1.next());
+        for (String s : queue) {
+            System.out.println(s);
         }
         queue.remove();
         queue.poll();
         System.out.println("after removing two elements:");
-        Iterator<String> itr2 = queue.iterator();
-        while (itr2.hasNext()) {
-            System.out.println(itr2.next());
+        for (String s : queue) {
+            System.out.println(s);
         }
         System.out.println();
 
         //DeQueue InterFace
         //ArrayDequeue
-        Deque<String> deque = new ArrayDeque<String>();
-        deque.add("Harender");
+        Deque<String> deque = new ArrayDeque<>();
+        deque.offer("Harender");
         deque.add("Karan");
         deque.add("Aakash");
-        System.out.println("peak :" + deque.peek());
+        deque.offer("Mahender");
+        System.out.println("ArrayDequeue peak :" + deque.peek());
         //Traversing elements
         for (String str : deque) {
-            System.out.println(str);
+            System.out.println("ArrayDequeue elements :" + str);
         }
+        System.out.println();
         //LinkedList
 
         //Set InterFace
         //HashSet
-        HashSet<Demo> hs = new HashSet<Demo>();
+        System.out.println("HashSet :");
+        HashSet<Demo> hs = new HashSet<>();
         Demo d1 = new Demo(121,"Harender", 85000.0);
         Demo d2 = new Demo(130,"Aakash", 75000.0);
         Demo d3 = new Demo(127,"Kirti", 80000.0);
+        Demo d4 = new Demo(130,"Aakash",75000.0);
         hs.add(d1);
         hs.add(d2);
         hs.add(d3);
+        hs.add(d4);
         for(Demo d:hs) {
             System.out.println("Employee id :" + d.id + "\n" + "Employee Name :" + d.name + "\n" + "Employee Salary :" + d.salary);
         }
+        System.out.println();
+
         //LinkedHashSet
+        System.out.println("LinkedHashSet :");
+        LinkedHashSet<Integer> lhs = new LinkedHashSet<>();
+        lhs.add(23);
+        lhs.add(34);
+        lhs.add(65);
+        lhs.add(12);
+        lhs.add(34);
+        System.out.println("All values :" + lhs);
+        System.out.println();
+
         //SortedSet InterFace
         //TreeSet
+        System.out.println("SortedSet :");
+        SortedSet<Integer> ts = new TreeSet<>();
+        ts.add(23);
+        ts.add(12);
+        ts.add(65);
+        ts.add(54);
+        ts.add(12);
+        ts.add(65);
+        System.out.println(ts);
+        for(Integer el : ts) {
+            System.out.println(el);
+        }
+        System.out.println();
 
         //Map InterFace
         //AbstractMap
