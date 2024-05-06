@@ -173,9 +173,37 @@ public class CollectionTutorial {
         //Map InterFace
         //AbstractMap
         //HashMap
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the size of HashMap :");
+//        int num = sc.nextInt();
+//        System.out.println("Enter the elements of HashMap :");
+        Map<Integer, String> hm = new HashMap<>();
+        hm.put(1,"Harender");
+        hm.put(7,"Kirti");
+        hm.put(3,"Aakash");
+        System.out.println("Given HashMap is :" + hm);
+        for(Map.Entry mvp : hm.entrySet()){
+            System.out.println(mvp.getKey()+" "+mvp.getValue());
+        }
+        System.out.println(hm.entrySet());
+        System.out.println(hm.keySet());
+        System.out.println(hm.values());
+        hm.remove(1);
+        System.out.println(hm);
+
         //EnumMap
         //SortedMap InterFace
         //NavigableMap
         //TreeMap
+        System.out.println("TreeMap is :");
+        SortedMap<Integer, String> shm = new TreeMap<>();
+        shm.put(1,"Harender");
+        shm.put(7,"Kirti");
+        shm.put(3,"Aakash");
+        System.out.println("Given TreeMap is :" + shm);
+        for(Map.Entry mvp : shm.entrySet()){
+            System.out.println(mvp.getKey()+" "+mvp.getValue());
+        }
+
     }
 }
