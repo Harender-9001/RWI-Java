@@ -1,5 +1,8 @@
 import work.lambda.*;
 
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
@@ -51,6 +54,9 @@ public class Main {
                 System.out.println("The given number " + num + " is a odd number");
             }
         };
-        evenOddInter.getEvenOdd(345);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your number :");
+        int num = sc.nextInt();
+        evenOddInter.getEvenOdd(num);
     }
 }
