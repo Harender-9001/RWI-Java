@@ -1,14 +1,15 @@
 package Java_8_Features;
 
 interface sayble {
-    void say(String msg);
+    void say(String msg);  //only abstract method
+
     //methods of object class
     int hashCode();
     String toString();
     boolean equals(Object obj);
     default int add(int a, int b) {
         return a+b;
-    }
+    }  //default method
 }
 public class FunctionalInterfaceDemo implements sayble {
     public void say(String msg) {

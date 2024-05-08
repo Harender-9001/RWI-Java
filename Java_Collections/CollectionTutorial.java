@@ -1,5 +1,7 @@
 package Java_Collections;
 
+import groovyjarjarantlr4.runtime.tree.Tree;
+
 import java.util.*;
 class Demo{
     int id;
@@ -177,13 +179,14 @@ public class CollectionTutorial {
 //        System.out.println("Enter the size of HashMap :");
 //        int num = sc.nextInt();
 //        System.out.println("Enter the elements of HashMap :");
-        Map<Integer, String> hm = new HashMap<>();
-        hm.put(1,"Harender");
-        hm.put(7,"Kirti");
+        System.out.println("HashMap is :");
+        HashMap<Integer, String> hm = new HashMap<>();
+        hm.put(7,"Harender");
+        hm.put(1,"Kirti");
         hm.put(3,"Aakash");
         System.out.println("Given HashMap is :" + hm);
-        for(Map.Entry mvp : hm.entrySet()){
-            System.out.println(mvp.getKey()+" "+mvp.getValue());
+        for(Map.Entry e : hm.entrySet()){
+            System.out.println(e.getKey()+" "+e.getValue());
         }
         System.out.println(hm.entrySet());
         System.out.println(hm.keySet());
@@ -196,13 +199,13 @@ public class CollectionTutorial {
         //NavigableMap
         //TreeMap
         System.out.println("TreeMap is :");
-        SortedMap<Integer, String> shm = new TreeMap<>();
-        shm.put(1,"Harender");
-        shm.put(7,"Kirti");
+        TreeMap<Integer, String> shm = new TreeMap<>();
+        shm.put(7,"Harender");
+        shm.put(1,"Kirti");
         shm.put(3,"Aakash");
         System.out.println("Given TreeMap is :" + shm);
-        for(Map.Entry mvp : shm.entrySet()){
-            System.out.println(mvp.getKey()+" "+mvp.getValue());
+        for(Map.Entry e1 : shm.entrySet()){
+            System.out.println(e1.getKey()+" "+e1.getValue());
         }
 
     }
