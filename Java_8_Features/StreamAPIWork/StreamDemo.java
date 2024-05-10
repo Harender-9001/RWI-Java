@@ -2,7 +2,6 @@ package Java_8_Features.StreamAPIWork;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 class Student {
     int id;

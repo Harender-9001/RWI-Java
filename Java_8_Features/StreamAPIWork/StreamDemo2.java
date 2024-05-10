@@ -1,4 +1,4 @@
-package Java_8_Features.LambdaWork;
+package Java_8_Features.StreamAPIWork;
 
 import java.util.ArrayList;
 
@@ -19,7 +19,7 @@ class Product {
 public class StreamDemo2 {
     public static void main(String[] args) {
 
-        List<Product> productList = new ArrayList<Product>();
+        List<Product> productList = new ArrayList<>();
         productList.add(new Product(1, "Desktop", "Dell"));
         productList.add(new Product(2, "Laptop", "HP"));
         productList.add(new Product(3, "Desktop", "HP"));
