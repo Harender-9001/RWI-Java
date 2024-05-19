@@ -26,7 +26,14 @@ public class MethodRefDemo {
         workInter.doTask();
 
         // static method reference
-        Runnable runnable = Stuff::talbe;
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                Stuff.talbe();
+            }
+        };
+
+        runnable.run();
         Thread th = new Thread(runnable);
         th.start();
     }

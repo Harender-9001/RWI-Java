@@ -44,15 +44,6 @@ public class StreamMethods {
                 new Sale(LocalDate.of(2024, 3, 5), "Watch", 125)
         ); // this is the list of all the sales
 
-        /*
-        Integer amountSoldInMarch = 0;
-        for (Sale sale: sales) {
-            if (sale.getDate().getMonth() == Month.MARCH && sale.getProduct().startsWith("B")) {
-                amountSoldInMarch += sale.getAmount();
-            }
-        }
-        System.out.println("Amount sold in March: " + amountSoldInMarch);
-         */
 
         // to calculates the sum of amount in March
         int amountSoldInMarch = sales.stream()
