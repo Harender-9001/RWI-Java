@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="student1" class="com.spring.Student">
+<!--        <property name="studentId" value="9001"/>-->
+<!--        <property name="studentName" value="Harender"/>-->
+<!--        <property name="studentAddress" value="Hodal"/>-->
+
+        <constructor-arg index="0" value="9001"/>
+        <constructor-arg index="1" value="Harender"/>
+        <constructor-arg index="2" value="Hodal"/>
+    </bean>
+</beans>
