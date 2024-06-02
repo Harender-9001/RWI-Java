@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--    Using getter and setter-->
+    <bean name="employee1" class="com.springCore.collections.Employee">
+        <property name="name" value="Harender"/>
+        <property name="addresses">
+            <list>
+                <value>Hodal</value>
+                <value>Hisar</value>
+                <value>Gurgaon</value>
+            </list>
+        </property>
+        <property name="projects">
+            <set>
+                <value>Project1</value>
+                <value>Project2</value>
+                <value>Project3</value>
+            </set>
+        </property>
+        <property name="skills">
+            <map>
+                <entry key="Core Java" value="2 Months"/>
+                <entry key="Advanced Java" value="3 Months"/>
+                <entry key="JavaScript" value="1 Month"/>
+            </map>
+        </property>
+        <property name="prop">
+            <props>
+                <prop key="Name">Harender</prop>
+                <prop key="Roll Number">9001</prop>
+                <prop key="Section">A</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
