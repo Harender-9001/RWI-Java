@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="address" class="com.springCore.ci.Address">
+        <constructor-arg value="Hodal"/>
+        <constructor-arg value="Haryana"/>
+        <constructor-arg value="India"/>
+    </bean>
+    <bean name="person" class="com.springCore.ci.Person">
+        <constructor-arg value="Harender"/>
+        <constructor-arg value="24"/>
+        <constructor-arg ref="address"/>
+    </bean>
+</beans>
