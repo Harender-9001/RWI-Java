@@ -11,6 +11,6 @@ public class Test {
         System.out.println(person);
 
         Addition add = (Addition) context.getBean("add");
-        add.doSum();
+        add.getSum();
     }
 }

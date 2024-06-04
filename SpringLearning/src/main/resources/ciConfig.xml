@@ -14,4 +14,9 @@
         <constructor-arg value="24"/>
         <constructor-arg ref="address"/>
     </bean>
+
+    <bean name="add" class="com.springCore.ci.Addition">
+        <constructor-arg value="10" type="double" index="1"/>  <!--Ambiguity problem solved using type and index-->
+        <constructor-arg value="20" type="double" index="0"/>
+    </bean>
 </beans>
