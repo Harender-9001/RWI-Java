@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:list list-class="java.util.ArrayList" id="add">
+        <value>Hodal</value>
+        <value>Hisar</value>
+        <value>Gurgaon</value>
+    </util:list>
+
+    <util:set set-class="java.util.HashSet" id="pro">
+        <value>Project1</value>
+        <value>Project2</value>
+        <value>Project3</value>
+    </util:set>
+
+    <util:map map-class="java.util.HashMap" id="skill">
+        <entry key="Core Java" value="2 Months"/>
+        <entry key="Advanced Java" value="3 Months"/>
+        <entry key="JavaScript" value="1 Month"/>
+    </util:map>
+
+    <util:properties id="data">
+        <prop key="Roll Number">9001</prop>
+        <prop key="Section">A</prop>
+    </util:properties>
+
+    <!--    Using getter and setter-->
+    <bean name="employee1" class="com.springCore.standalon.collections.Employee">
+        <property name="name" value="Harender"/>
+        <property name="addresses" ref="add"/>
+        <property name="projects" ref="pro"/>
+        <property name="skills" ref="skill"/>
+        <property name="prop" ref="data"/>
+
+    </bean>
+    <bean name="employee2" class="com.springCore.standalon.collections.Employee">
+        <property name="name" value="Kirti"/>
+        <property name="addresses" ref="add"/>
+        <property name="projects" ref="pro"/>
+        <property name="skills" ref="skill"/>
+        <property name="prop" ref="data"/>
+    </bean>
+</beans>
